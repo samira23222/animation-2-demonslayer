@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 4</title>
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+
+}
+body{
+    background-image: linear-gradient(to bottom, black, rgb(167, 114, 15), rgb(68, 14, 14));
+    width:100%;
+    height:100vh;
+    font-family: sans-serif;
+}
+.container{
+    position:absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all;
+    transition-duration: 1s; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.container1{
+    position:absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+    width: 350px;
+    height: 350px;
+    z-index: -1;   
+}
+
+
+.text{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+.photo{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color:transparent;
+    transition: all;
+    transition-duration: 1s;
+    background-image: url(animations/images/cutie.jpeg);
+    z-index: 1;
+
+}
+.container:hover> .photo{
+       transform: translateY(-200%);
+       opacity: 0;
+       transition-duration: 2s;
+
+    }
+    .border-top-bottom, .border-sides{
+        border-color: white;
+        border-style: none;
+        transition:all;
+        transition-duration: 1s;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+
+
+    }
+    .border-top-bottom{
+        height:60%;
+        width:0;
+        border-right-width: 5px;
+    }
+    .border-sides{
+        height:0;
+        width:60%;
+    }
+
+
+    .container:hover > .border-sides{
+        height: 70%;
+        border-left-style: solid;
+        border-right-style: solid;
+
+
+
+    }
+    .container:hover > .border-top-bottom{
+        width: 70%;
+        border-top-style: solid;
+        border-bottom-style: solid;
+
+
+
+    }
+ 
+ 
+ 
+ 
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="photo"></div>
+        <div class="text"> Demonslayer season 2 started! </div>
+        <div class="border-top-bottom"> </div>
+        <div class="border-sides"></div>
+            
+        
+        </div>
+    </div>
+    
+</body>
+</html>
